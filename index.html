@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Habit Sheet</title>
+
+    <link rel="manifest" href="./manifest.json">
+
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+
+<body>
+
+<header>
+
+    <h1>Habit Tracker</h1>
+
+    <button id="addHabitBtn">
+        + Add Habit
+    </button>
+
+</header>
+
+
+<main>
+
+    <div id="habitGrid" class="grid-container"></div>
+
+</main>
+
+
+<!-- Days-of-week settings for a habit -->
+<dialog id="daysDialog">
+
+    <h2 id="daysDialogTitle">Days</h2>
+
+    <p class="dialog-help">
+        Choose the days you plan to do this habit.
+        Days that are turned off are not counted in the %.
+    </p>
+
+    <div id="dayPicker" class="day-picker"></div>
+
+    <p id="daysError" class="dialog-error" hidden>
+        Select at least one day.
+    </p>
+
+    <div class="dialog-actions">
+        <button type="button" id="daysCancelBtn">Cancel</button>
+        <button type="button" id="daysSaveBtn">Save</button>
+    </div>
+
+</dialog>
+
+
+<script src="./js/app.js"></script>
+
+
+<script>
+
+if ("serviceWorker" in navigator) {
+
+    window.addEventListener(
+        "load",
+        () => {
+
+            navigator.serviceWorker.register(
+                "./sw.js"
+            );
+
+        }
+    );
+
+}
+
+</script>
+
+
+</body>
+</html>
