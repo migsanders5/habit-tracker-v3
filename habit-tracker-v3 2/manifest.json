@@ -1,8 +1,0 @@
-{
-    "name": "Habit Sheet",
-    "short_name": "Habits",
-    "start_url": "./index.html",
-    "display": "standalone",
-    "background_color": "#ffffff",
-    "theme_color": "#4CAF50"
-}
